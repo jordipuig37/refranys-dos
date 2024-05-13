@@ -5,6 +5,7 @@ import random
 import pytz
 import time
 
+NOMBRE_DE_FRASES = 98
 
 def set_seed():
     madrid_tz = pytz.timezone('Europe/Madrid')
@@ -30,8 +31,8 @@ def llegeix_parts(index_primera: int, index_segona: int):
 def frase_del_dia():
     st.title("La frase del dia és:")
     set_seed()
-    primer = random.randint(1, 100)
-    segon = random.randint(1, 100)
+    primer = random.randint(0, NOMBRE_DE_FRASES)
+    segon = random.randint(0, NOMBRE_DE_FRASES)
     p1, p2, f1, f2 = llegeix_parts(primer, segon)
     st.markdown(f"<h2 style='text-align: center'>{p1} {p2}</h2>", unsafe_allow_html=True)
     st.text("")
@@ -44,8 +45,8 @@ def generador_aleatori():
     st.title("Generador aleatori")
     random.seed(time.time())
     if st.button("Genera una frase"):
-        primer = random.randint(1, 100)
-        segon = random.randint(1, 100)
+        primer = random.randint(0, NOMBRE_DE_FRASES)
+        segon = random.randint(0, NOMBRE_DE_FRASES)
         p1, p2, f1, f2 = llegeix_parts(primer, segon)
         st.markdown(f"<h2 style='text-align: center'>{p1} {p2}</h2>", unsafe_allow_html=True)
         st.text("")
