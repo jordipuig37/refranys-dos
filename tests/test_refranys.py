@@ -11,6 +11,7 @@ def test_data_completeness():
     assert df["refrany"].isnull().sum() == 0
     assert df["part1"].isnull().sum() == 0
     assert df["part2"].isnull().sum() == 0
+    assert df["definicio"].isnull().sum() == 0
 
 
 def test_data_consistency():
