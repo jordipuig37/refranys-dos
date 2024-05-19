@@ -19,7 +19,7 @@ def llegeix_dataset():
     df = pd.read_csv("refranys.csv", quotechar='"', quoting=1)
     return df
 
-NOMBRE_DE_FRASES = 10 # len(llegeix_dataset())
+NOMBRE_DE_FRASES = len(llegeix_dataset())
 
 
 def llegeix_parts(index_primera: int, index_segona: int):
@@ -43,8 +43,10 @@ def mostra_frase_definicions(idx1: int, idx2: int):
     st.markdown(f"<h2 style='text-align: center'>{r1_part1} {r2_part2}</h2>", unsafe_allow_html=True)
     st.text("")
     st.markdown("Les frases originals són:")
-    st.markdown("**"+refrany1+"**: "+r1_def)
-    st.markdown("**"+refrany2+"**: "+r2_def)
+    st.markdown("**"+refrany1+"**: <br/> "+r1_def, unsafe_allow_html=True)
+    st.markdown("**"+refrany2+"**: <br/> "+r2_def, unsafe_allow_html=True)
+    # st.markdown("**"+refrany1+"**: "+r1_def)
+    # st.markdown("**"+refrany2+"**: "+r2_def)
 
 
 def frase_del_dia():
@@ -57,11 +59,12 @@ def frase_del_dia():
 
 def generador_aleatori():
     st.title("Generador aleatori")
-    random.seed(time.time())
     if st.button("Genera una frase"):
-        primer = random.randint(0, NOMBRE_DE_FRASES-1)
-        segon = random.randint(0, NOMBRE_DE_FRASES-1)
-        mostra_frase_definicions(primer, segon)
+        pass
+    random.seed(time.time())
+    primer = random.randint(0, NOMBRE_DE_FRASES-1)
+    segon = random.randint(0, NOMBRE_DE_FRASES-1)
+    mostra_frase_definicions(primer, segon)
 
 
 def main():
