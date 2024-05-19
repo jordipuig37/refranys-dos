@@ -75,7 +75,7 @@ def main():
 
     # [ ] Revisar amb l'Anaiis a nivell de disseny de la pagina
     st.divider()
-    st.markdown("Si no vols pols és una aplicació per aprendre frases fetes en Català de manera divertida. De manera aleatòria, es poden generar frases fetes barrejant la primera part d'una, amb la segona part d'una altra. Cada dia sortirà una combinació única, i també pots anar a la pàgina de generació aleatòria per provar noves combinacions. Els refranys els hem extret del llibre [Els 100 refranys més populars](https://lafinestralectora.cat/els-100-refranys-mes-populars/) de Víctor Pàmies i Jordi Palou. Les definicions les hem extret de [Roda Mots](https://rodamots.cat/)")
+    st.markdown("Si no vols pols és una aplicació per aprendre frases fetes en Català de manera divertida. De manera aleatòria, es poden generar frases fetes barrejant la primera part d'una, amb la segona part d'una altra. Cada dia sortirà una combinació única, i també pots anar a la pàgina de generació aleatòria per provar noves combinacions. Els refranys els hem extret del llibre [Els 100 refranys més populars](https://lafinestralectora.cat/els-100-refranys-mes-populars/) de Víctor Pàmies i Jordi Palou. Les definicions les hem extret de [Roda Mots](https://rodamots.cat/) i de [Paremiologia catalana comparada digital](https://pccd.dites.cat/).")
     st.markdown("Esperem que us ho passeu bé!")
 
 
