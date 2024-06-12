@@ -3,6 +3,7 @@ import streamlit_app as sta
 
 def test_read_data():
     df = sta.llegeix_dataset()
+    assert df is not None
 
 
 def test_data_completeness():
